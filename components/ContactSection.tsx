@@ -1,74 +1,81 @@
-
 import React from 'react';
-import { TEXTS, CONTACT_PHONE, CONTACT_EMAIL, ADDRESS, INSTAGRAM_URL, FACEBOOK_URL, BOOKSY_URL, PhoneIcon, EmailIcon, MapPinIcon, InstagramIcon, FacebookIcon, BooksyIcon } from '../constants';
+import { TEXTS, CONTACT_PHONE, CONTACT_EMAIL, ADDRESS, PhoneIcon, EmailIcon, MapPinIcon, BOOKSY_URL, socialLinkCards } from '../constants';
 
 export const ContactSection: React.FC = () => {
   return (
     <section className="py-16 lg:py-24 bg-brand-accent" id="contact">
       <div className="container mx-auto px-6">
         {/* Call to Action */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 lg:mb-20">
           <h2 className="font-display text-4xl text-brand-primary mb-4">{TEXTS.ctaTitle}</h2>
-          <p className="text-lg text-gray-600 max-w-xl mx-auto mb-8">
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8"> {/* Changed max-w-xl to max-w-3xl */}
             {TEXTS.ctaDescription}
           </p>
-          <a 
-            href={BOOKSY_URL} 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="button-gradient text-white font-semibold px-10 py-4 rounded-full shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105 text-lg"
+          <a
+            href={BOOKSY_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="button-gradient text-white font-semibold px-6 py-3 text-base sm:px-8 sm:py-3 sm:text-lg md:px-10 md:py-4 md:text-lg rounded-full shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105"
           >
-            Zarezerwuj Swoją Chwilę Relaksu
+            Zarezerwuj swoją chwilę relaksu
           </a>
         </div>
 
         {/* Contact Info & Map */}
-        <div className="grid md:grid-cols-2 gap-12 items-start">
-          <div className="bg-white p-8 rounded-lg shadow-xl">
-            <h3 className="font-display text-3xl text-brand-primary mb-6">{TEXTS.contactTitle}</h3>
-            <div className="space-y-4 text-gray-700">
-              <p className="flex items-center">
-                <MapPinIcon className="w-6 h-6 mr-3 text-brand-primary-light flex-shrink-0" /> {ADDRESS}
-              </p>
-              <p className="flex items-center">
-                <PhoneIcon className="w-6 h-6 mr-3 text-brand-primary-light flex-shrink-0" /> 
-                <a href={`tel:${CONTACT_PHONE.replace(/\s+/g, '')}`} className="hover:text-brand-primary">{CONTACT_PHONE}</a>
-              </p>
-              <p className="flex items-center">
-                <EmailIcon className="w-6 h-6 mr-3 text-brand-primary-light flex-shrink-0" /> 
-                <a href={`mailto:${CONTACT_EMAIL}`} className="hover:text-brand-primary">{CONTACT_EMAIL}</a>
-              </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-y-10 md:gap-x-12">
+          <div className="bg-white p-6 sm:p-8 rounded-lg shadow-xl h-full flex flex-col">
+            <div> {/* Wrapper for initial contact info */}
+              <h3 className="font-display text-3xl text-brand-primary mb-6">{TEXTS.contactTitle}</h3>
+              <div className="space-y-4 text-gray-700">
+                <p className="flex items-start sm:items-center">
+                  <MapPinIcon className="w-6 h-6 mr-3 text-brand-primary-light flex-shrink-0 mt-1 sm:mt-0" /> {ADDRESS}
+                </p>
+                <p className="flex items-center">
+                  <PhoneIcon className="w-6 h-6 mr-3 text-brand-primary-light flex-shrink-0" />
+                  <a href={`tel:${CONTACT_PHONE.replace(/\s+/g, '')}`} className="hover:text-brand-primary">{CONTACT_PHONE}</a>
+                </p>
+                <p className="flex items-center">
+                  <EmailIcon className="w-6 h-6 mr-3 text-brand-primary-light flex-shrink-0" />
+                  <a href={`mailto:${CONTACT_EMAIL}`} className="hover:text-brand-primary">{CONTACT_EMAIL}</a>
+                </p>
+              </div>
             </div>
-            <div className="mt-8">
-              <h4 className="font-semibold text-lg text-gray-800 mb-3">Śledź nas:</h4>
-              <div className="flex space-x-4">
-                <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="text-brand-primary-light hover:text-brand-primary">
-                  <InstagramIcon className="w-8 h-8" />
-                </a>
-                <a href={FACEBOOK_URL} target="_blank" rel="noopener noreferrer" className="text-brand-primary-light hover:text-brand-primary">
-                  <FacebookIcon className="w-8 h-8" />
-                </a>
-                <a href={BOOKSY_URL} target="_blank" rel="noopener noreferrer" className="text-brand-primary-light hover:text-brand-primary">
-                  <BooksyIcon className="w-8 h-8" />
-                </a>
+
+            {/* Find Us Online Section - Moved inside contact card */}
+            <div className="mt-8 pt-6 border-t border-gray-200"> {/* Added top margin and border */}
+              <h4 className="font-display text-2xl text-brand-primary mb-4">{TEXTS.findUsOnlineTitle}</h4>
+              <div className="space-y-3"> {/* Reduced space between cards */}
+                {socialLinkCards.map((card) => (
+                  <a
+                    key={card.platform}
+                    href={card.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={card.ariaLabel}
+                    className={`flex items-center p-3 bg-white rounded-lg shadow-md border hover:shadow-lg transition-shadow duration-300 ${card.borderColorClass} hover:bg-gray-50`} // Reduced padding, added hover
+                  >
+                    <i className={`${card.iconClass} ${card.iconColorClass} text-2xl w-7 text-center mr-3`}></i> {/* Adjusted icon size & margin */}
+                    <div>
+                      <span className="font-semibold text-gray-800 text-md">{card.platform}</span> {/* Adjusted platform text size */}
+                      <span className="text-xs text-gray-600 block">{card.details}</span> {/* Adjusted details text size */}
+                    </div>
+                  </a>
+                ))}
               </div>
             </div>
           </div>
 
-          <div className="bg-white p-2 rounded-lg shadow-xl aspect-w-16 aspect-h-9">
-             {/* Placeholder for map - In a real app, use an iframe or a map library */}
-            <img 
-                src={`https://maps.googleapis.com/maps/api/staticmap?center=${encodeURIComponent(ADDRESS)}&zoom=15&size=600x400&markers=color:0x721d30%7Clabel:H%7C${encodeURIComponent(ADDRESS)}&key=YOUR_GOOGLE_MAPS_API_KEY`} 
-                alt="Mapa lokalizacji Kliniki Holy" 
-                className="rounded-md object-cover w-full h-full"
-                onError={(e) => {
-                    const target = e.target as HTMLImageElement;
-                    target.onerror = null; // Prevent infinite loop if placeholder also fails
-                    target.src = "https://picsum.photos/seed/map/600/400"; // Fallback placeholder
-                    target.alt = "Placeholder map image";
-                }}
-            />
-            <p className="text-xs text-gray-500 mt-1 text-center">Uwaga: Aby wyświetlić mapę, potrzebny jest klucz Google Maps API. Wyświetlono obraz zastępczy.</p>
+          <div className="bg-white rounded-lg shadow-xl overflow-hidden aspect-w-16 aspect-h-9 min-h-[300px] md:min-h-[400px]">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2359.7499297505465!2d20.487677240907423!3d53.74052847252105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e278bdd436bef7%3A0xb8be59bb91abb75c!2sJarocka%2061%2C%2011-041%20Olsztyn!5e0!3m2!1spl!2spl!4v1749917186649!5m2!1spl!2spl" 
+              width="100%" 
+              height="100%" 
+              style={{ border:0 }} 
+              allowFullScreen={true}
+              loading="lazy" 
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Lokalizacja Kliniki Holy na mapie Google"
+            ></iframe>
           </div>
         </div>
       </div>
