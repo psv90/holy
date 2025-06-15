@@ -6,7 +6,7 @@ export const AboutUs: React.FC = () => {
   return (
     <section id="about">
       {/* Part 1: Intro and "Co nas wyróżnia?" */}
-      <div className="bg-brand-accent py-16 lg:py-20">
+      <div style={{ backgroundColor: '#777' }} className="py-16 lg:py-20">
         <div className="container mx-auto px-6">
           <div className="text-center">
             <h2 className="font-display text-4xl text-brand-primary mb-4">{TEXTS.aboutSectionTitle}</h2>
