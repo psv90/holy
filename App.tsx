@@ -1,11 +1,11 @@
 
 import React from 'react';
-import { Header } from './components/Header';
-import { Hero } from './components/Hero';
-import { AboutUs } from './components/AboutUs';
-import { ServicesSection } from './components/ServicesSection';
-import { ContactSection } from './components/ContactSection';
-import { InstagramIcon, FacebookIcon, PhoneIcon, EmailIcon, MapPinIcon, BooksyIcon } from './constants'; // Assuming BooksyIcon is defined
+import { Header } from './components/Header.tsx';
+import { Hero } from './components/Hero.tsx';
+import { AboutUs } from './components/AboutUs.tsx';
+// import { ServicesSection } from './components/ServicesSection.tsx'; // Removed
+import { ContactSection } from './components/ContactSection.tsx';
+import { InstagramIcon, FacebookIcon, PhoneIcon } from './constants.tsx';
 
 const App: React.FC = () => {
   return (
@@ -14,19 +14,17 @@ const App: React.FC = () => {
       <main>
         <Hero />
         <AboutUs />
-        <ServicesSection />
+        {/* <ServicesSection /> */} {/* Removed */}
         <ContactSection />
       </main>
-      <footer className="bg-gray-800 text-white py-8 text-center">
+      <footer style={{ backgroundColor: '#721d30' }} className="text-white py-8 text-center">
         <div className="container mx-auto px-6">
           <div className="flex justify-center space-x-6 mb-4">
-            <a href="https://www.instagram.com/holyklinika/" target="_blank" rel="noopener noreferrer" className="hover:text-brand-primary-light">
+            <a href="https://www.instagram.com/holyklinika/" target="_blank" rel="noopener noreferrer" className="hover:text-brand-accent">
               <InstagramIcon className="w-6 h-6" />
             </a>
-            <a href="http://holyklinika.booksy.com/" target="_blank" rel="noopener noreferrer" className="hover:text-brand-primary-light">
-              <BooksyIcon className="w-6 h-6" />
-            </a>
-            <a href="https://www.facebook.com/profile.php?id=61551766116690" target="_blank" rel="noopener noreferrer" className="hover:text-brand-primary-light">
+            {/* Removed Booksy Icon Link */}
+            <a href="https://www.facebook.com/profile.php?id=61551766116690" target="_blank" rel="noopener noreferrer" className="hover:text-brand-accent">
               <FacebookIcon className="w-6 h-6" />
             </a>
           </div>

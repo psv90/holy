@@ -1,5 +1,6 @@
 {
   "name": "Klinika Holy - Salon Piękności",
   "description": "Strona internetowa dla Kliniki Holy, salonu piękności i spa oferującego holistyczne podejście do pielęgnacji ciała i umysłu.",
-  "requestFramePermissions": []
+  "requestFramePermissions": [],
+  "prompt": ""
 }

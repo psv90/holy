@@ -58,28 +58,76 @@ export const TEXTS = {
   heroTitle: "Witamy w Holy",
   heroSubtitle: "Twojej przestrzeni spokoju i równowagi",
   heroDescription: "W świecie, który ciągle pędzi, stworzyłyśmy miejsce, gdzie możesz się zatrzymać. W Klinice Holy dbamy o Ciebie z czułością i uważnością, nie tylko na poziomie ciała, ale też umysłu i emocji.",
-  aboutIntro: "Twojej przestrzeni spokoju, troski i prawdziwej regeneracji. W świecie, który nie zna pauzy, my ją tworzymy. Holy to miejsce, gdzie możesz się zatrzymać. Złapać oddech. Zostać wysłuchaną. Dbamy o Ciebie z uważnością w atmosferze domowego ciepła i zaufania – nie tylko na poziomie ciała, ale i emocji.",
+  aboutSectionTitle: "Twoja przestrzeń spokoju, troski i prawdziwej regeneracji.",
+  aboutIntro: "W świecie, który nie zna pauzy, my ją tworzymy. Holy to miejsce, gdzie możesz się zatrzymać. Złapać oddech. Zostać wysłuchaną. Dbamy o Ciebie z uważnością w atmosferze domowego ciepła i zaufania – nie tylko na poziomie ciała, ale i emocji.",
   aboutNoRush: "Bez pośpiechu, bez sztywnych schematów, za to z ogromem troski. Bo dla nas najważniejsze jest, żebyś poczuła się… naprawdę dobrze.",
   whatDistinguishesTitle: "Co nas wyróżnia?",
   distinguishingFeatures: [
-    { title: "Holistyczne podejście", description: "Łączymy nowoczesne terapie z zabiegami beauty, by wspierać Twój organizm w równowadze." },
-    { title: "Czas tylko dla Ciebie", description: "Nie spieszymy się, słuchamy, dobieramy zabiegi indywidualnie, z uważnością na Twoje potrzeby." },
-    { title: "Domowa atmosfera", description: "Stworzona z miłością przestrzeń, gdzie możesz się rozgościć i na chwilę zapomnieć o świecie." },
-    { title: "Sprawdzona jakość", description: "Pracujemy wyłącznie na produktach, które same stosujemy i którym ufamy." },
-    { title: "Autentyczność", description: "Bez stresu, bez \"taśmowości\", bez anonimowości. Holistyczne podejście – widzimy więcej niż tylko skórę czy paznokcie." }
+    { title: "Holistyczne podejście", description: "Łączymy nowoczesne terapie z zabiegami beauty, by wspierać Twój organizm w równowadze.", icon: "fas fa-check" },
+    { title: "Czas tylko dla Ciebie", description: "Nie spieszymy się, słuchamy, dobieramy zabiegi indywidualnie, z uważnością na Twoje potrzeby.", icon: "fas fa-check" },
+    { title: "Domowa atmosfera", description: "Stworzona z miłością przestrzeń, gdzie możesz się rozgościć i na chwilę zapomnieć o świecie.", icon: "fas fa-check" },
+    { title: "Sprawdzona jakość", description: "Pracujemy wyłącznie na produktach, które same stosujemy i którym ufamy.", icon: "fas fa-check" },
+    { title: "Autentyczność", description: "Bez stresu, bez \"taśmowości\", bez anonimowości. Holistyczne podejście – widzimy więcej niż tylko skórę czy paznokcie.", icon: "fas fa-check" },
+    { title: "Holistyczne podejście", description: "Widzimy więcej niż tylko skórę czy paznokcie.", icon: "fas fa-check" }
   ],
   forWhomTitle: "Dla kogo jesteśmy?",
-  forWhomDescription: "Dla kobiet, które: Potrzebują oddechu od codzienności. Szukają czegoś więcej niż “zabieg”. Cenią autentyczność i spokój. Chcą poczuć się zaopiekowane i dobrze we własnym ciele – od wewnątrz i na zewnątrz.",
-  servicesTitle: "Nasze Usługi",
-  servicesDescription: "Jesteśmy tu dla Ciebie – niezależnie, czy przychodzisz po piękniejsze brwi, depilację, zabieg, pedicure czy... po prostu chwilę ciszy.",
-  servicesList: [
-    { name: "Piękne Brwi", imgSrc: "https://picsum.photos/seed/brows/400/300", description: "Profesjonalna stylizacja i regulacja brwi." },
-    { name: "Depilacja", imgSrc: "https://picsum.photos/seed/depilation/400/300", description: "Gładka skóra na dłużej dzięki naszym metodom depilacji." },
-    { name: "Zabiegi na Twarz", imgSrc: "https://picsum.photos/seed/facial/400/300", description: "Indywidualnie dobrane zabiegi pielęgnacyjne i odmładzające." },
-    { name: "Pedicure", imgSrc: "https://picsum.photos/seed/pedicure/400/300", description: "Relaks i pielęgnacja dla Twoich stóp." }
-  ],
+  forWhomSubtitle: "Dla kobiet, które szukają czegoś więcej niż zwykły \"zabieg\"",
   ctaTitle: "Zaparz kawę. Zdejmij płaszcz. Jesteś u siebie.",
   ctaDescription: "Zacznij swoją małą, wielką regenerację z nami. Z miłością, jak u przyjaciółki.",
   contactTitle: "Skontaktuj się z Nami",
-  locationTitle: "Gdzie jesteśmy?"
+  locationTitle: "Gdzie jesteśmy?",
+  findUsOnlineTitle: "Znajdź nas w sieci"
 };
+
+export const forWhomItems = [
+  {
+    icon: "fas fa-seedling",
+    title: "Potrzebujesz oddechu",
+    description: "Od codzienności, od ciągłego pędu. Miejsca, gdzie możesz się zatrzymać i nabrać sił."
+  },
+  {
+    icon: "fas fa-user", // Changed from fas fa-leaf
+    title: "Cenisz autentyczność",
+    description: "I spokój. Szukasz miejsca bez sztuczności, gdzie możesz być sobą."
+  },
+  {
+    icon: "fas fa-hand-holding-heart",
+    title: "Chcesz być zaopiekowana",
+    description: "I poczuć się dobrze we własnym ciele – od wewnątrz i na zewnątrz."
+  },
+  {
+    icon: "fas fa-mug-hot",
+    title: "Szukasz ciszy",
+    description: "Chwili dla siebie, gdzie możesz zaparzyć kawę i poczuć się jak u siebie."
+  }
+];
+
+export const socialLinkCards = [
+  {
+    platform: "Instagram",
+    iconClass: "fab fa-instagram",
+    details: "@holyklinika - Sprawdź nowości",
+    url: INSTAGRAM_URL,
+    borderColorClass: "border-pink-400",
+    iconColorClass: "text-pink-500",
+    ariaLabel: "Klinika Holy na Instagramie"
+  },
+  {
+    platform: "Facebook",
+    iconClass: "fab fa-facebook-f",
+    details: "Bądź na bieżąco z nami",
+    url: FACEBOOK_URL,
+    borderColorClass: "border-blue-400",
+    iconColorClass: "text-blue-600",
+    ariaLabel: "Klinika Holy na Facebooku"
+  },
+  {
+    platform: "Booksy",
+    iconClass: "fas fa-calendar-check",
+    details: "Zarezerwuj wizytę online",
+    url: BOOKSY_URL,
+    borderColorClass: "border-brand-primary",
+    iconColorClass: "text-brand-primary",
+    ariaLabel: "Zarezerwuj wizytę w Klinika Holy przez Booksy"
+  }
+];
