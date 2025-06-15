@@ -1,26 +1,72 @@
-/* Dodaj to do sekcji <style> w index.html */
-
-/* Mobile-specific background fixes */
-@media (max-width: 768px) {
-  .hero-section {
-    background-attachment: scroll !important;
-    background-size: cover !important;
-    background-position: center center !important;
-    min-height: 100vh !important;
-    /* Fallback dla starszych przeglądarek mobile */
-    background-color: #721d30 !important;
-  }
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Klinika Holy</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   
-  /* Zmniejsz overlay opacity na mobile dla lepszej czytelności */
-  .hero-dominant-overlay {
-    background-image: linear-gradient(to bottom, rgba(82, 25, 40, 0.6), rgba(114, 29, 48, 0.8)) !important;
-  }
-}
+  <style>
+    html, body, #root {
+      height: 100%; /* Ensure full height for layout stability */
+    }
+    html {
+      background-color: #f0e8e3; /* Default background for the entire page */
+    }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #f0e8e3; /* Ensure body also has this background */
+      /* Tailwind preflight handles body margin: 0 */
+    }
+    h1, h2, h3, h4, h5, h6, .font-display {
+      font-family: 'Playfair Display', serif;
+    }
+    .header-gradient {
+      /* Darker, using brand primary and a slightly darker shade */
+      background-image: linear-gradient(to right, #5C1726, #721d30); /* Darker to brand-primary */
+    }
+    .button-gradient {
+      background-image: linear-gradient(to right, #8C2F43, #721d30); /* Lighter shade to brand-primary */
+    }
+    .button-gradient:hover {
+      background-image: linear-gradient(to right, #721d30, #5C1726); /* brand-primary to darker shade */
+    }
+    .hero-dominant-overlay { /* New class for hero overlay */
+      background-image: linear-gradient(to bottom, rgba(82, 25, 40, 0.75), rgba(114, 29, 48, 0.9)); /* shades around #721d30 with opacity */
+    }
 
-/* Dodatkowy fallback dla bardzo starych urządzeń */
-@media (-webkit-min-device-pixel-ratio: 1) {
-  .hero-section {
-    background-image: none !important;
-    background-color: #721d30 !important;
+    /* Tailwind CSS Customization */
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'brand-primary': '#721d30',
+            'brand-primary-light': '#8C2F43',
+            'brand-primary-dark': '#5C1726',
+            'brand-accent': '#FDE8E8', /* A very light, warm pink/off-white for backgrounds */
+            'hero-text-custom': '#edcbcb',
+          }
+        }
+      }
+    }
+  </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/"
   }
 }
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

@@ -9,7 +9,7 @@ import { InstagramIcon, FacebookIcon, PhoneIcon } from './constants.tsx';
 
 const App: React.FC = () => {
   return (
-    <div style={{ backgroundColor: '#FFFFFF' }} className="min-h-screen text-gray-700">
+    <div className="bg-white min-h-screen text-gray-700">
       <Header />
       <main>
         <Hero />
