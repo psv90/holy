@@ -4,7 +4,7 @@ import { TEXTS, CONTACT_PHONE, CONTACT_EMAIL, ADDRESS, PhoneIcon, EmailIcon, Map
 
 export const ContactSection: React.FC = () => {
   return (
-    <section className="bg-brand-accent py-16 lg:py-24" id="contact">
+    <section style={{ backgroundColor: '#f0e8e3' }} className="py-16 lg:py-24" id="contact">
       <div className="container mx-auto px-6">
         {/* Call to Action */}
         <div className="text-center mb-16 lg:mb-20">
@@ -16,7 +16,7 @@ export const ContactSection: React.FC = () => {
             href={BOOKSY_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="button-gradient text-white font-semibold px-6 py-3 text-base sm:px-8 sm:py-3 sm:text-lg md:px-10 md:py-4 md:text-lg rounded-full shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105"
+            className="button-gradient text-white font-semibold px-4 py-3 text-sm sm:px-8 sm:py-3 sm:text-lg md:px-10 md:py-4 md:text-lg rounded-full shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105"
           >
             Zarezerwuj swoją chwilę relaksu
           </a>

@@ -30,7 +30,7 @@ export const Header: React.FC = () => {
       </div>
 
       {/* Main Navigation */}
-      <nav className="bg-white py-3 px-4 sm:px-6 lg:px-8">
+      <nav style={{ backgroundColor: '#f0e8e3' }} className="py-3 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto flex justify-between items-center">
           <a href="#" className="flex items-center group" aria-label="Klinika Holy - Strona Główna">
             <img src="https://i.imgur.com/3lsoome.png" alt="Holy Klinika Logo" className="h-14 w-auto mr-3 transition-transform duration-300 group-hover:scale-105" />
@@ -44,7 +44,7 @@ export const Header: React.FC = () => {
             href={BOOKSY_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="button-gradient text-white px-6 py-2 rounded-full shadow hover:shadow-lg transition duration-300 transform hover:scale-105 text-sm font-medium"
+            className="button-gradient text-white px-6 py-2 rounded-full shadow hover:shadow-lg transition duration-300 transform hover:scale-105 text-sm font-medium flex items-center justify-center text-center"
           >
             Zarezerwuj wizytę
           </a>

@@ -6,7 +6,7 @@ export const AboutUs: React.FC = () => {
   return (
     <section id="about">
       {/* Part 1: Intro and "Co nas wyróżnia?" */}
-      <div style={{ backgroundColor: '#777' }} className="py-16 lg:py-20">
+      <div style={{ backgroundColor: '#f0e8e3' }} className="py-16 lg:py-20">
         <div className="container mx-auto px-6">
           <div className="text-center">
             <h2 className="font-display text-4xl text-brand-primary mb-4">{TEXTS.aboutSectionTitle}</h2>
@@ -39,7 +39,7 @@ export const AboutUs: React.FC = () => {
       </div>
 
       {/* Part 2: "Dla kogo jesteśmy?" */}
-      <div style={{ background: 'linear-gradient(135deg, #f7f3f0 0%, #e8ddd4 100%)' }} className="py-16 lg:py-20">
+      <div style={{ background: 'linear-gradient(135deg, rgb(232, 221, 212) 0%, rgb(219, 201, 186) 100%)' }} className="py-16 lg:py-20">
         <div className="container mx-auto px-6">
           <div className="text-center mb-10 lg:mb-12">
             <h2 className="font-display text-4xl text-brand-primary mb-4"> {/* Removed md:text-5xl */}
