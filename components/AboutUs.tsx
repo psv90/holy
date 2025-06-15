@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { TEXTS, forWhomItems } from '../constants.tsx';
 

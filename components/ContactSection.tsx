@@ -1,9 +1,10 @@
+
 import React from 'react';
 import { TEXTS, CONTACT_PHONE, CONTACT_EMAIL, ADDRESS, PhoneIcon, EmailIcon, MapPinIcon, BOOKSY_URL, socialLinkCards } from '../constants';
 
 export const ContactSection: React.FC = () => {
   return (
-    <section className="py-16 lg:py-24 bg-brand-accent" id="contact">
+    <section className="bg-brand-accent py-16 lg:py-24" id="contact">
       <div className="container mx-auto px-6">
         {/* Call to Action */}
         <div className="text-center mb-16 lg:mb-20">
