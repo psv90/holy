@@ -63,12 +63,12 @@ export const TEXTS = {
   aboutNoRush: "Bez pośpiechu, bez sztywnych schematów, za to z ogromem troski. Bo dla nas najważniejsze jest, żebyś poczuła się… naprawdę dobrze.",
   whatDistinguishesTitle: "Co nas wyróżnia?",
   distinguishingFeatures: [
-    { title: "Holistyczne podejście", description: "Łączymy nowoczesne terapie z zabiegami beauty, by wspierać Twój organizm w równowadze.", icon: "fas fa-check" },
-    { title: "Czas tylko dla Ciebie", description: "Nie spieszymy się, słuchamy, dobieramy zabiegi indywidualnie, z uważnością na Twoje potrzeby.", icon: "fas fa-check" },
-    { title: "Domowa atmosfera", description: "Stworzona z miłością przestrzeń, gdzie możesz się rozgościć i na chwilę zapomnieć o świecie.", icon: "fas fa-check" },
-    { title: "Sprawdzona jakość", description: "Pracujemy wyłącznie na produktach, które same stosujemy i którym ufamy.", icon: "fas fa-check" },
-    { title: "Autentyczność", description: "Bez stresu, bez \"taśmowości\", bez anonimowości. Holistyczne podejście – widzimy więcej niż tylko skórę czy paznokcie.", icon: "fas fa-check" },
-    { title: "Holistyczne podejście", description: "Widzimy więcej niż tylko skórę czy paznokcie.", icon: "fas fa-check" }
+    { title: "Holistyczne podejście", description: "Łączymy nowoczesne terapie z zabiegami beauty, by wspierać Twój organizm w równowadze.", icon: "fas fa-check", descriptionColor: "#000000" },
+    { title: "Czas tylko dla Ciebie", description: "Nie spieszymy się, słuchamy, dobieramy zabiegi indywidualnie, z uważnością na Twoje potrzeby.", icon: "fas fa-check", descriptionColor: "#000000" },
+    { title: "Domowa atmosfera", description: "Stworzona z miłością przestrzeń, gdzie możesz się rozgościć i na chwilę zapomnieć o świecie.", icon: "fas fa-check", descriptionColor: "#000000" },
+    { title: "Sprawdzona jakość", description: "Pracujemy wyłącznie na produktach, które same stosujemy i którym ufamy.", icon: "fas fa-check", descriptionColor: "#000000" },
+    { title: "Autentyczność", description: "Bez stresu, bez \"taśmowości\", bez anonimowości. Holistyczne podejście – widzimy więcej niż tylko skórę czy paznokcie.", icon: "fas fa-check", descriptionColor: "#000000" },
+    { title: "Holistyczne podejście", description: "Widzimy więcej niż tylko skórę czy paznokcie.", icon: "fas fa-check", descriptionColor: "#000000" }
   ],
   forWhomTitle: "Dla kogo jesteśmy?",
   forWhomSubtitle: "Dla kobiet, które szukają czegoś więcej niż zwykły \"zabieg\"",
@@ -109,7 +109,7 @@ export const socialLinkCards = [
     details: "@holyklinika - Sprawdź nowości",
     url: INSTAGRAM_URL,
     borderColorClass: "border-pink-400",
-    iconColorClass: "text-pink-500",
+    iconColorClass: "text-pink-500", // Will render pink
     ariaLabel: "Klinika Holy na Instagramie"
   },
   {
@@ -118,7 +118,7 @@ export const socialLinkCards = [
     details: "Bądź na bieżąco z nami",
     url: FACEBOOK_URL,
     borderColorClass: "border-blue-400",
-    iconColorClass: "text-blue-600",
+    iconColorClass: "text-blue-600", // Will render blue
     ariaLabel: "Klinika Holy na Facebooku"
   },
   {
@@ -126,8 +126,8 @@ export const socialLinkCards = [
     iconClass: "fas fa-calendar-check",
     details: "Zarezerwuj wizytę online",
     url: BOOKSY_URL,
-    borderColorClass: "border-brand-primary",
-    iconColorClass: "text-brand-primary",
+    borderColorClass: "border-gray-400", // Changed border to gray for neutrality
+    iconColorClass: "text-black", // Will render black
     ariaLabel: "Zarezerwuj wizytę w Klinika Holy przez Booksy"
   }
 ];

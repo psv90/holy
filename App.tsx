@@ -17,7 +17,7 @@ const App: React.FC = () => {
         {/* <ServicesSection /> */} {/* Removed */}
         <ContactSection />
       </main>
-      <footer style={{ backgroundColor: '#721d30' }} className="text-white py-8 text-center">
+      <footer style={{ backgroundColor: '#ac1368' }} className="text-white py-8 text-center">
         <div className="container mx-auto px-6">
           <div className="flex justify-center space-x-6 mb-4">
             <a href="https://www.instagram.com/holyklinika/" target="_blank" rel="noopener noreferrer" className="hover:text-brand-accent">
