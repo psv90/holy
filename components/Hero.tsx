@@ -14,17 +14,17 @@ export const Hero: React.FC = () => {
         <h1 className="font-display text-5xl md:text-7xl mb-6">
           {TEXTS.heroTitle}
         </h1>
-        <p className="text-xl md:text-2xl mb-4 font-light text-hero-text-custom opacity-70">
+        <p className="text-xl md:text-2xl mb-4 font-light text-hero-text-custom" style={{ opacity: 0.85 }}>
           {TEXTS.heroSubtitle}
         </p>
-        <p className="text-lg md:text-xl mb-10 max-w-2xl mx-auto font-light text-hero-text-custom opacity-70">
+        <p className="text-lg md:text-xl mb-10 max-w-2xl mx-auto font-light text-hero-text-custom" style={{ opacity: 0.85 }}>
           {TEXTS.heroDescription}
         </p>
         <a
           href={BOOKSY_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="button-gradient text-white font-semibold px-10 py-4 rounded-full shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105 text-lg"
+          className="button-gradient text-white font-semibold px-10 py-4 rounded-full shadow hover:shadow-lg transition duration-300 transform hover:scale-105 text-lg"
         >
           Zarezerwuj wizytę
         </a>
