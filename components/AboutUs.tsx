@@ -101,7 +101,16 @@ export const AboutUs: React.FC = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
             {forWhomItems.map((item, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg shadow-lg flex flex-col items-start text-left h-full">
+              <div 
+                key={index} 
+                className="bg-white p-6 rounded-lg shadow-lg flex flex-col items-start text-left h-full relative" 
+                style={{
+                  backgroundImage: "url('https://raw.githubusercontent.com/psv90/holy/main/assets/lisc2.png')",
+                  backgroundRepeat: 'no-repeat',
+                  backgroundPosition: 'right 0px top 0px',
+                  backgroundSize: '40px auto' 
+                }}
+              >
                 <div className="flex items-center mb-3">
                   <span className="text-2xl mr-3 w-8 text-center" style={{ color: '#d91a60' }}>
                     <i className={item.icon}></i>
