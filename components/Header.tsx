@@ -33,7 +33,7 @@ export const Header: React.FC = () => {
       <nav className="py-3 px-4 sm:px-6 lg:px-8"> {/* Removed inline style here */}
         <div className="container mx-auto flex justify-between items-center">
           <a href="#" className="flex items-center group" aria-label="Klinika Holy - Strona Główna">
-            <img src="https://i.imgur.com/Ov2ohky.png" alt="Holy Klinika Logo" className="h-16 sm:h-20 lg:h-24 w-auto mr-3 transition-transform duration-300 group-hover:scale-105" />
+            <img src="https://raw.githubusercontent.com/psv90/holy/main/assets/holy-logo-removebg-preview.png" alt="Holy Klinika Logo" className="h-16 sm:h-20 lg:h-24 w-auto mr-3 transition-transform duration-300 group-hover:scale-105" />
             <div>
               <span className="block font-display text-4xl lg:text-5xl font-bold text-black leading-tight group-hover:text-gray-700 transition-colors">Holy</span>
               <span className="block text-sm lg:text-base text-black leading-tight">Holistyczna klinika urody i zdrowia</span>
