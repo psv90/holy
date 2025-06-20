@@ -1,7 +1,7 @@
 
 import React from 'react';
 
-export const CONTACT_EMAIL = "kontakt@holyklinika.pl"; // Placeholder email
+export const CONTACT_EMAIL = "holyklinika@gmail.com"; // Updated email
 export const CONTACT_PHONE = "733-530-878";
 export const ADDRESS = "ul. Jarocka 61, 10-699 Olsztyn";
 
