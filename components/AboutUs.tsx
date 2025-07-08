@@ -1,6 +1,5 @@
-
 import React from 'react';
-import { TEXTS, forWhomItems } from '../constants.tsx';
+import { TEXTS, forWhomItems, BOOKSY_URL } from '../constants.tsx';
 
 const galleryImages = [
   { src: 'https://raw.githubusercontent.com/psv90/holy/main/assets/IMG-3571.jpg', alt: 'Wnętrze Kliniki Holy - recepcja' },
@@ -10,6 +9,12 @@ const galleryImages = [
   { src: 'https://raw.githubusercontent.com/psv90/holy/main/assets/IMG-3763%20(1).jpg', alt: 'Produkty używane w Klinice Holy' },
   { src: 'https://raw.githubusercontent.com/psv90/holy/main/assets/IMG-3764%20(1).jpg', alt: 'Atmosfera relaksu w Klinice Holy' },
   { src: 'https://raw.githubusercontent.com/psv90/holy/main/assets/IMG-5536.jpg', alt: 'Inny gabinet zabiegowy w Klinice Holy' },
+];
+
+const featuredServices = [
+  { name: 'Pedicure DeLuxe SPA hybrydowy z opracowaniem stóp', price: '200,00 zł', duration: '1g 15min' },
+  { name: 'Manicure Hybrydowy', price: '130,00 zł', duration: '1g 15min' },
+  { name: 'Pedicure tylko hybryda (bez opracowania podeszwy)', price: '120,00 zł', duration: '55min' },
 ];
 
 export const AboutUs: React.FC = () => {
@@ -43,6 +48,41 @@ export const AboutUs: React.FC = () => {
               {TEXTS.aboutNoRush}
             </p>
           </div>
+
+          {/* Featured Services Table */}
+          <div className="mt-12 lg:mt-16 max-w-4xl mx-auto">
+            <div className="bg-white rounded-lg shadow-lg overflow-x-auto">
+              <table className="w-full text-left text-sm sm:text-base">
+                <thead className="bg-pink-100 border-b-2 border-pink-200">
+                  <tr>
+                    <th className="p-4 font-semibold text-base uppercase tracking-wider" style={{ color: '#5e0a39' }}>Usługa</th>
+                    <th className="p-4 font-semibold text-base uppercase tracking-wider text-right" style={{ color: '#5e0a39' }}>Cena</th>
+                    <th className="p-4 font-semibold text-base uppercase tracking-wider text-right" style={{ color: '#5e0a39' }}>Czas trwania</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {featuredServices.map((service, index) => (
+                    <tr key={index} className="border-b border-pink-100 last:border-b-0 hover:bg-pink-50 transition-colors">
+                      <td className="p-4 text-gray-800 font-medium">{service.name}</td>
+                      <td className="p-4 text-gray-600 whitespace-nowrap text-right">{service.price}</td>
+                      <td className="p-4 text-gray-600 whitespace-nowrap text-right">{service.duration}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <div className="text-center mt-8">
+                <a
+                  href={BOOKSY_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="cta-button-gradient text-white font-semibold px-8 py-3 rounded-full shadow hover:shadow-lg transition duration-300 transform hover:scale-105 text-base"
+                >
+                  Sprawdź pozostałe usługi na Booksy
+                </a>
+            </div>
+          </div>
+
 
           {/* Image Gallery Section */}
           <div className="mt-12 lg:mt-16 text-center"> {/* Adjusted top margin */}
