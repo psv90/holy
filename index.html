@@ -1,83 +1,118 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8"/>
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="imgs/holy-logo-whitebg.png">
   <title>Klinika Holy</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  
-  <style>
-    html, body, #root {
-      height: 100%; /* Ensure full height for layout stability */
-    }
-    html {
-      background-color: #f0e8e3; /* Default background for the entire page */
-    }
-    body {
-      font-family: 'Montserrat', sans-serif;
-      background-color: #f0e8e3; /* Ensure body also has this background */
-      /* Tailwind preflight handles body margin: 0 */
-    }
-    h1, h2, h3, h4, h5, h6, .font-display {
-      font-family: 'Playfair Display', serif;
-    }
-    .header-gradient {
-      background-color: #ac1368; /* Updated background color */
-      background-image: none; /* Remove any previous gradient */
-    }
-    .button-gradient {
-      /* Updated gradient to use 50 degree angle */
-      background-image: linear-gradient(50deg, #d31a7b, #b01168); 
-    }
-    .button-gradient:hover {
-      /* Updated hover gradient to use 50 degree angle */
-      background-image: linear-gradient(50deg, #b01168, #930e56);
-    }
-    .hero-dominant-overlay { /* Updated class for hero overlay */
-      background-image: linear-gradient(to bottom, rgba(172, 19, 104, 0.5), rgba(172, 19, 104, 0.5)); /* #ac1368 with 50% opacity */
-    }
-
-    .cta-button-gradient {
-      /* Updated gradient to use 50 degree angle, matching .button-gradient */
-      background-image: linear-gradient(50deg, #d31a7b, #b01168);
-    }
-    .cta-button-gradient:hover {
-      /* Updated hover gradient to use 50 degree angle, matching .button-gradient:hover */
-      background-image: linear-gradient(50deg, #b01168, #930e56);
-    }
-
-    /* Tailwind CSS Customization */
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            'brand-primary': '#721d30',
-            'brand-primary-light': '#8C2F43',
-            'brand-primary-dark': '#5C1726',
-            'brand-accent': '#FDE8E8', /* A very light, warm pink/off-white for backgrounds */
-            'hero-text-custom': '#edcbcb',
-          }
-        }
-      }
-    }
-  </style>
-<script type="importmap">
-{
-  "imports": {
-    "react/": "https://esm.sh/react@^19.1.0/",
-    "react": "https://esm.sh/react@^19.1.0",
-    "react-dom/": "https://esm.sh/react-dom@^19.1.0/"
-  }
-}
-</script>
-<link rel="stylesheet" href="/index.css">
+  <link rel="stylesheet" href="./index.css" />
 </head>
 <body>
-  <div id="root"></div>
-  <script type="module" src="/index.tsx"></script>
+  <header class="hk-header">
+    <div class="hk-topbar">
+      <div class="hk-container hk-row hk-between hk-center">
+        <div class="hk-row hk-gap-md">
+          <a href="mailto:holyklinika@gmail.com" class="hk-toplink" id="mail-bar" ><i class="fa-regular fa-envelope"></i> holyklinika@gmail.com</a>
+          <a href="tel:733530878" class="hk-toplink" id="nmbr-bar"><i class="fa-solid fa-phone"></i> 733 530 878</a>
+        </div>
+        <div class="hk-row hk-gap-sm">
+          <a href="https://www.instagram.com/holyklinika/" id="insta-bar" target="_blank" rel="noopener noreferrer" class="hk-toplink"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.facebook.com/profile.php?id=61551766116690" id="fb-bar" target="_blank" rel="noopener noreferrer" class="hk-toplink"><i class="fa-brands fa-facebook-f"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <nav class="hk-nav">
+      <div class="hk-container hk-row hk-between hk-center">
+        <a href="#" class="hk-brand">
+          <img src="https://raw.githubusercontent.com/psv90/holy/main/assets/holy-logo-removebg-preview.png" alt="Holy Klinika Logo" class="hk-brand-logo" />
+          <div>
+            <span class="hk-brand-name">Holy</span>
+            <span class="hk-brand-sub">Holistyczna klinika urody i zdrowia</span>
+          </div>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hk-hero">
+      <div class="hk-hero-overlay"></div>
+      <div class="hk-container hk-hero-content">
+        <h1>Witamy w Holy</h1>
+        <p class="hk-hero-sub">Twojej przestrzeni spokoju i równowagi</p>
+        <p class="hk-hero-desc">W świecie, który ciągle pędzi, stworzyłyśmy miejsce, gdzie możesz się zatrzymać. W Klinice Holy dbamy o Ciebie z czułością i uważnością, nie tylko na poziomie ciała, ale też umysłu i emocji.</p>
+        <a href="https://booksy.com/pl-pl/213341_holy-holistyczna-klinika-urody_salon-kosmetyczny_4934_olsztyn#ba_s=sr_1" target="_blank" rel="noopener noreferrer" class="hk-btn hk-btn-main">Zarezerwuj wizytę</a>
+      </div>
+    </section>
+
+    <section class="hk-about">
+      <div class="hk-container">
+        <h2 class="hk-title">Twoja przestrzeń spokoju, troski i prawdziwej regeneracji.</h2>
+        <p class="hk-lead">W świecie, który nie zna pauzy, my ją tworzymy. Holy to miejsce, gdzie możesz się zatrzymać. Złapać oddech. Zostać wysłuchaną.</p>
+
+
+        <div class="hk-gallery">
+          <img src="https://d375139ucebi94.cloudfront.net/region2/pl/213341/inspiration/1e1fc64b4d8c4c688815bcdb6b2b8b-holy-holistyczna-klinika-urody-inspiration-9231f6ad90d443e1b630aa9e1ab0a6-booksy.jpeg"  />
+          <img src="https://d375139ucebi94.cloudfront.net/region2/pl/213341/inspiration/a1bdf1114770407ba4ff93a399ba62-holy-holistyczna-klinika-urody-inspiration-f9292cf3458242668300890650d5ae-booksy.jpeg"  />
+          <img src="https://d375139ucebi94.cloudfront.net/region2/pl/213341/inspiration/8b4727706a6a4b0a89e4a19c94d500-holy-holistyczna-klinika-urody-inspiration-117773dad80848c8a5c1ac311d2900-booksy.jpeg" />
+          <img src="https://d375139ucebi94.cloudfront.net/region2/pl/213341/inspiration/9f65fbcd840848949aaffe8b48e905-holy-holistyczna-klinika-urody-inspiration-135a12a7c87c4501a843ab4a030927-booksy.jpeg" alt="Poczekalnia" />
+          <img src="https://d375139ucebi94.cloudfront.net/region2/pl/213341/inspiration/a27b2ec39d3d41419b0d766d2f35aa-holy-holistyczna-klinika-urody-inspiration-9c0cf73a042e4536969e0f0c3ee7fe-booksy.jpeg" />
+          <img src="https://d375139ucebi94.cloudfront.net/region2/pl/213341/inspiration/9bd45b5445e3456cad65830a2c80b9-holy-holistyczna-klinika-urody-inspiration-f215b039beb34669b654421c4fa079-booksy.jpeg" />
+        </div>
+      </div>
+    </section>
+
+    <section class="hk-contact" id="contact">
+      <div class="hk-container hk-contact-grid">
+        <div class="hk-card">
+          <h3>Skontaktuj się z nami</h3>
+          <p><a href="https://www.google.com/maps/dir//HOLY+Holistyczna+Klinika+Urody+i+Zdrowia,+Jarocka+61,+10-699+Olsztyn/@53.740521,20.4876638,675m/data=!3m1!1e3!4m17!1m7!3m6!1s0x46e278bdd4264ba9:0x4645b9669e27429a!2sHOLY+Holistyczna+Klinika+Urody+i+Zdrowia!8m2!3d53.740521!4d20.4902387!16s%2Fg%2F11yhwy0c8p!4m8!1m0!1m5!1m1!1s0x46e278bdd4264ba9:0x4645b9669e27429a!2m2!1d20.4902387!2d53.740521!3e3?entry=ttu&g_ep=EgoyMDI2MDUwMi4wIKXMDSoASAFQAw%3D%3D"><i class="fa-solid fa-location-dot"></i> ul. Jarocka 61, 10-699 Olsztyn</a></p>
+          <p><a href="tel:733530878"><i class="fa-solid fa-phone"></i> 733 530 878</a></p>
+          <p><a href="mailto:holyklinika@gmail.com"><i class="fa-regular fa-envelope"></i> holyklinika@gmail.com</a></p>
+          <div class="social-btns">
+            <a class="social-btn social-btn--ig" href="https://www.instagram.com/holyklinika/" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-instagram social-icon"></i>
+              <span class="social-copy">
+                <span class="social-title">Instagram</span>
+                <span class="social-sub">@holyklinika - Sprawdź nowości</span>
+              </span>
+            </a>
+            <a class="social-btn social-btn--fb" href="https://www.facebook.com/profile.php?id=61551766116690" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-facebook-f social-icon"></i>
+              <span class="social-copy">
+                <span class="social-title">Facebook</span>
+                <span class="social-sub">Bądź na bieżąco z nami</span>
+              </span>
+            </a>
+            <a class="social-btn social-btn--booksy" href="https://booksy.com/pl-pl/213341_holy-holistyczna-klinika-urody_salon-kosmetyczny_4934_olsztyn#ba_s=sr_1" target="_blank" rel="noopener noreferrer">
+              <i class="fa-solid fa-calendar-check social-icon"></i>
+              <span class="social-copy">
+                <span class="social-title">Booksy</span>
+                <span class="social-sub">Zarezerwuj wizytę online</span>
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="hk-map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2937.3975721947763!2d20.487663777287484!3d53.74052097240631!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e278bdd4264ba9%3A0x4645b9669e27429a!2sHOLY%20Holistyczna%20Klinika%20Urody%20i%20Zdrowia!5e1!3m2!1sen!2spl!4v1778151647645!5m2!1sen!2spl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" ></iframe><p style="display: none;">Author: Alex Zaj</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="hk-footer">
+    <div class="hk-container">
+      <div class="hk-row hk-center hk-gap-md">
+        <a href="https://www.instagram.com/holyklinika/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=61551766116690" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i></a>
+      </div>
+      <p>Klinika Holy © 2026. Wszelkie prawa zastrzeżone.</p>
+    </div>
+  </footer>
 </body>
 </html>

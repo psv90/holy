@@ -1,0 +1,479 @@
+﻿:root {
+  --hk-bg: #f0e8e3;
+  --hk-primary: #ac1368;
+  --hk-primary-dark: #930e56;
+  --hk-text: #2b2b2b;
+  --hk-title: #5e0a39;
+  --hk-soft: #fef3f9;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--hk-text);
+  background: var(--hk-bg);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+.hk-container {
+  width: min(1200px, 92%);
+  margin: 0 auto;
+}
+
+.hk-row {
+  display: flex;
+}
+
+.hk-between {
+  justify-content: space-between;
+}
+
+.hk-center {
+  justify-content: center;
+  text-align: center;
+}
+
+.hk-center.hk-row {
+  align-items: center;
+}
+
+.hk-gap-sm {
+  gap: 12px;
+}
+
+.hk-gap-md {
+  gap: 18px;
+}
+
+.hk-header {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background: #fff;
+}
+
+.hk-topbar {
+  background: var(--hk-primary);
+  color: #fce7f3;
+  padding: 2px 0;
+  font-size: 15px;
+  
+}
+
+.hk-toplink {
+  display: inline-flex;
+
+  align-items: center;
+  gap: 8px;
+}
+#insta-bar,#fb-bar{
+  font-size: 25px;
+  padding-left: 5px;
+}
+.hk-nav {
+  padding: 14px 0;
+}
+
+.hk-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.hk-brand-logo {
+  width: auto;
+  height: 90px;
+}
+
+.hk-brand-name {
+  display: block;
+  font: 700 52px/1 'Playfair Display', serif;
+  color: #000;
+  position: relative;
+  left: -30%;
+}
+
+.hk-brand-sub {
+  display: block;
+  font-size: 16px;
+  color: #000;
+}
+.hk-btn {
+  display: inline-block;
+  border-radius: 999px;
+  padding: 12px 24px;
+  color: #fff;
+  font-weight: 600;
+  transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
+}
+
+.hk-btn-main {
+  background-image: linear-gradient(50deg, #d31a7b, #b01168);
+  box-shadow: 0 8px 14px rgba(0, 0, 0, .15);
+}
+
+.hk-btn-main:hover {
+  transform: scale(1.03);
+  background-image: linear-gradient(50deg, #b01168, var(--hk-primary-dark));
+}
+
+.hk-hero {
+  position: relative;
+  background: url('https://d375139ucebi94.cloudfront.net/region2/pl/213341/biz_photo/5b11153c464c43b89a95bbac2f9084-holy-holistyczna-klinika-urody-biz-photo-bfebfb1cf7ae40ee9c3b940357e360-booksy.jpeg') center/cover no-repeat;
+  color: #fff;
+}
+
+.hk-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(138, 106, 124, 0.5), rgba(172, 19, 104, .5));
+}
+
+.hk-hero-content {
+  position: relative;
+  text-align: center;
+  padding: 120px 0;
+}
+
+.hk-hero h1 {
+  font: 700 62px/1.1 'Playfair Display', serif;
+  margin: 0 0 20px;
+}
+
+.hk-hero-sub {
+  color: #edcbcb;
+  font-size: 30px;
+  margin: 0 0 12px;
+}
+
+.hk-hero-desc {
+  color: #edcbcb;
+  max-width: 760px;
+  margin: 0 auto 34px;
+  font-size: 21px;
+  line-height: 1.6;
+}
+
+.hk-about {
+  background: var(--hk-soft);
+  padding: 70px 0;
+}
+
+.hk-title {
+  color: var(--hk-title);
+  text-align: center;
+  font: 700 44px/1.2 'Playfair Display', serif;
+  margin: 0 0 14px;
+}
+
+.hk-lead {
+  text-align: center;
+  max-width: 880px;
+  margin: 0 auto 36px;
+  font-size: 19px;
+  line-height: 1.7;
+}
+
+.hk-table-wrap {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 18px rgba(0, 0, 0, .1);
+  overflow: auto;
+}
+
+.hk-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.hk-table thead {
+  background: #fce7f3;
+}
+
+.hk-table th,
+.hk-table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #fbcfe8;
+}
+
+.hk-table td:nth-child(2),
+.hk-table td:nth-child(3),
+.hk-table th:nth-child(2),
+.hk-table th:nth-child(3) {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.hk-center {
+  margin-top: 24px;
+}
+
+.hk-gallery {
+  margin-top: 36px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.hk-gallery img {
+  height: 260px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 10px 16px rgba(0, 0, 0, .14);
+}
+
+.hk-contact {
+  padding: 72px 0;
+}
+
+.hk-contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+
+.hk-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 28px;
+  box-shadow: 0 12px 20px rgba(0, 0, 0, .12);
+
+}
+
+.hk-card h3 {
+  margin: 0 0 20px;
+  color: var(--hk-title);
+  font: 700 36px/1.2 'Playfair Display', serif;
+}
+
+.hk-card p {
+  margin: 0 0 14px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.hk-card i {
+  color: #d91a60;
+  width: 20px;
+  text-align: center;
+}
+
+.hk-map {
+  border-radius: 12px;
+  overflow: hidden;
+  min-height: 380px;
+  box-shadow: 0 12px 20px rgba(0, 0, 0, .12);
+}
+
+.hk-map iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.hk-footer {
+  background: var(--hk-primary);
+  color: #fff;
+  text-align: center;
+  padding: 32px 0;
+}
+
+.hk-footer i {
+  font-size: 22px;
+}
+
+@media (max-width: 980px) {
+  .hk-brand-name {
+    font-size: 40px;
+  }
+
+  .hk-hero h1 {
+    font-size: 48px;
+  }
+
+  .hk-hero-sub {
+    font-size: 24px;
+  }
+
+  .hk-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hk-contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 680px) {
+
+  .hk-topbar .hk-container,
+  .hk-nav .hk-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hk-brand {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hk-hero-content {
+    padding: 80px 0;
+  }
+
+  .hk-hero h1 {
+    font-size: 38px;
+  }
+
+  .hk-hero-sub {
+    font-size: 20px;
+  }
+
+  .hk-hero-desc {
+    font-size: 17px;
+  }
+
+  .hk-gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Legacy Instagram button (commented out)
+#footer-insta-divbox {
+  border: #B332AD 2px solid;
+  padding: 15px 50px 15px 50px;
+  border-radius: 7px;
+  color: #ff74f8;
+  text-shadow: #d91a60 0px 0px 1px;
+  transition: 0.7s ease;
+}
+#footer-insta-divbox:hover {
+ border: 2px solid transparent;
+  background:
+    linear-gradient(#fff, #fff) padding-box,
+    linear-gradient(45deg, #5655CC, #DA2E7B) border-box;
+  padding: 15px 50px 15px 50px;
+  border-radius: 7px;
+  color: #ff74f8;
+  text-shadow: #d91a60 0px 0px 1px;
+  transition: ease 0.7s;
+}
+#instagram-icon {
+  font-size: 40px;
+  position: relative;
+  top: 3%;
+  left: -6%; 
+   font-size: 40px;
+  background: radial-gradient(circle at 30% 107%,
+    #fdf497 0%, #fdf497 5%,
+    #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+*/
+
+.social-btns {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  width: 320px;
+  padding: 10px 14px;
+  border: 2px solid #d6249f;
+  border-radius: 8px;
+  color: #7a2459;
+  font-weight: 700;
+  font-size: 16px;
+  transition: 0.4s ease;
+}
+
+.social-btn--ig:hover {
+  border: 2px solid transparent;
+  background:
+    linear-gradient(#fff, #fff) padding-box,
+    radial-gradient(circle at 30% 107%,
+      #fdf497 0%, #fdf497 5%,
+      #fd5949 45%, #d6249f 60%, #285aeb 90%) border-box;
+  transition: 0.4s ease;
+  box-shadow: 2px 2px 5px #d6249f;
+}
+
+.social-btn--fb {
+  border-color: #1877f2;
+  color: #114a99;
+  transition: 0.4s ease;
+
+}
+
+.social-btn--fb:hover {
+  background: #eef5ff;
+  transition: 0.4s ease;
+  color: #5487ce;
+  box-shadow: 2px 2px 3px #1877f2;
+}
+
+.social-btn--booksy {
+  border-color: #111111;
+  color: #111111;
+  transition: 0.4s ease;
+}
+
+.social-btn--booksy:hover {
+  background: #f4f4f4;
+  transition: 0.4s ease;
+  color: #383838;
+  box-shadow: 2px 2px 5px black;
+}
+
+.social-icon {
+  font-size: 24px;
+  width: 24px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.social-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1.2;
+}
+
+.social-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: #5e0a39;
+}
+
+.social-sub {
+  font-size: 12px;
+  font-weight: 500;
+  color: #3a3a3a;
+}
+
+.social-btn--ig .social-icon {
+  color: #d6249f;
+}
